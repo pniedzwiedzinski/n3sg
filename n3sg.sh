@@ -22,6 +22,10 @@ for f in `cd $src && find . -type d ! -name '.' ! -path '*/_*'`; do
   mkdir -p "$dst/$f"
 done
 
+for f in `cd $src && find . -type f ! -name '*.md' ! -name 'index.md' ! -name '.' ! -path '*/_*'`; do
+  cp $src/$f $dst/$f
+done
+
 cat $src/_header.html > $dst/index.html
 [ -f $src/index.md ] && markdown $src/index.md >> $dst/index.html
 echo "<ul>" >> $dst/index.html

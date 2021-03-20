@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+
+publish_mode: editorial_workflow
+site_url: https://n3sg-demo.netlify.app
+locale: 'en'
+
+media_folder: 'src/media'
+public_folder: '/media'
+
+collections:
+  - name: posts
+    label: 'posts'
+    label_singular: 'post'
+    folder: 'src'
+    slug: '{{title}}'
+    path: '{{slug}}'
+    preview_path: '{{slug}}'
+    create: true
+    editor:
+      preview: true
+    fields:
+      - label: 'Title'
+        name: title
+        widget: string
+        required: true
+      - label: 'author'
+        name: author
+        widget: string
+        required: true
+      - label: 'Wpis'
+        name: body
+        widget: markdown
+        required: true
