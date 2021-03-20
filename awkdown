@@ -1,4 +1,4 @@
-#!/usr/bin/env -S awk -f
+#!/usr/bin/env -v awk -f
 
 # md2html.awk
 # by: Jesus Galan (yiyus) <yiyu.jgl@gmail>, May 2009

@@ -2,7 +2,7 @@
 
 markdown() {
   tail -n +$(($(sed -n '/---/,/---/p' $1 | wc -l)+1)) $1 | \
-    ./awkdown -v esc=false
+    awk -f ./awkdown -v esc=false
 }
 
 usage() {
