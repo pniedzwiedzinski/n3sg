@@ -1,14 +1,1 @@
 dest
-
-.jekyll-cache
-.tmp
-
-*.o
-*.log
-lowdown-0.8.3/Makefile.configure
-lowdown-0.8.3/config.h
-lowdown-0.8.3/*.old
-lowdown-0.8.3/liblowdown.a
-lowdown-0.8.3/lowdown
-lowdown-0.8.3/lowdown-diff
-lowdown-0.8.3/lowdown.pc

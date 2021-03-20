@@ -1,6 +1,6 @@
 # Netlify Simple Static Site Generator
 
-n3sg is a simple shell script for generating static sites
+n3sg is a simple shell script for generating static sites supporting frontmatter
 
 ## Goal
 
@@ -14,4 +14,4 @@ for generating multi-page static sites and also is easily compatible with
 ./n3sg src dest
 ```
 
-Copy the script directly into your repo
+Copy `n3sg` and `awkdown` directly into your repo

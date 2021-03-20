@@ -1,23 +1,8 @@
 #!/bin/sh
 
-# jekyll-cache is cached by netlify plugin
-mkdir -p .jekyll-cache
-export PATH="$PWD/.jekyll-cache:$PATH"
-
-
-## lowdown
-if [ ! -f .jekyll-cache/lowdown ]; then
-  cd "lowdown-0.8.3"
-  ./configure
-  make
-  cp lowdown ../.jekyll-cache
-  cd ..
-fi
-
-
 markdown() {
   tail -n +$(($(sed -n '/---/,/---/p' $1 | wc -l)+1)) $1 | \
-    lowdown --html-no-skiphtml --html-no-escapehtml
+    ./awkdown -v esc=false
 }
 
 usage() {
