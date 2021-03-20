@@ -15,7 +15,7 @@ collections:
     folder: 'src'
     slug: '{{title}}'
     path: '{{slug}}'
-    preview_path: '{{slug}}'
+    preview_path: '{{slug}}.html'
     create: true
     editor:
       preview: true
