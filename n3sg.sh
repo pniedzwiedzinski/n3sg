@@ -6,11 +6,11 @@ export PATH="$PWD/.jekyll-cache:$PATH"
 
 
 ## lowdown
-if [ ! -f ../.jekyll-cache/lowdown ]; then
+if [ ! -f .jekyll-cache/lowdown ]; then
   cd "lowdown-0.8.3"
   ./configure
   make
-  cp lowdown ../../.jekyll-cache
+  cp lowdown ../.jekyll-cache
   cd ..
 fi
 

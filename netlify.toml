@@ -1,6 +1,6 @@
 [build]
 	publish = "dest"
-	command = "./gen"
+	command = "./n3sg.sh src dest"
 
 [[plugins]]
 package = "netlify-plugin-jekyll-cache"
