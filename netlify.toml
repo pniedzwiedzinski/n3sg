@@ -1,0 +1,6 @@
+[build]
+	publish = "dest"
+	command = "./gen"
+
+[[plugins]]
+package = "netlify-plugin-jekyll-cache"
