@@ -18,5 +18,5 @@ Copy `n3sg` and `awkdown` directly into your repo or use this repo as a template
 
 ## It's pretty fast
 
-![Image of deploys list - it builds in under 20s](deploys.png)
-![Image of logs - n3sg run in 73ms](build.png)
+![Image of deploys list - it builds in under 20s](./docs/deploys.png)
+![Image of logs - n3sg run in 73ms](./docs/build.png)
