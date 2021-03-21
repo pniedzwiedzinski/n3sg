@@ -11,7 +11,7 @@ for generating multi-page static sites and also is easily compatible with
 ## Usage
 
 ```
-./n3sg.sh src dest
+./n3sg.sh src dest site_name site_url
 ```
 
 Copy `n3sg` and `awkdown` directly into your repo or use this repo as a template
