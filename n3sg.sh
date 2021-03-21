@@ -1,5 +1,7 @@
 #!/bin/sh
 
+start=$(date +%s.%N)
+
 markdown() {
   tail -n +$(($(sed -n '/---/,/---/p' $1 | wc -l)+1)) $1 | \
     awk -f ./awkdown -v esc=false
@@ -21,6 +23,8 @@ src="$1"
 dst="$2"
 title="$3"
 url="$4"
+
+echo "Building..."
 
 ## Bootstrap directory structure from $src into $dst
 for f in `cd $src && find . -type d ! -name '.' ! -path '*/_*'`; do
@@ -52,6 +56,8 @@ EOF
 ## For all markdown files
 for f in `cd $src && find . -type f -name '*.md' ! -name 'index.md' ! -name '.' ! -path '*/_*'`; do
 
+  echo "> $f"
+
   ## Meta extraction
   title=`sed -n '/---/,/---/p' $src/$f | grep title | cut -d':' -f2`
   author=`sed -n '/---/,/---/p' $src/$f | grep author | cut -d':' -f2`
@@ -82,10 +88,13 @@ EOF
   ]]></description>
 </item>
 EOF
-
 done
 
 ## Close tags
 echo "</ul>" >> $dst/index.html
 cat $src/_footer.html >> $dst/index.html
 echo "</channel></rss>" >> $dst/rss.xml
+
+duration=$(echo "$(date +%s.%N) - $start" | bc)
+execution_time=`printf "%.2f seconds" $duration`
+echo "Done! [$execution_time]"

@@ -16,6 +16,15 @@ for generating multi-page static sites and also is easily compatible with
 
 Copy `n3sg` and `awkdown` directly into your repo or use this repo as a template
 
+### Development
+
+For local development use `dev` script, which uses entr and your http server of
+choice for auto-rebuilding site on file change.
+
+```
+./dev
+```
+
 ## It's pretty fast
 
 ![Image of deploys list - it builds in under 20s](./docs/deploys.png)
