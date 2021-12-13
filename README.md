@@ -2,6 +2,8 @@
 
 n3sg is a simple shell script for generating static sites supporting frontmatter
 
+!!!!! This generator is not simple enough; Writing a static site generator is simple and you should write your own!
+
 ## Goal
 
 The goal for this project is to have an extremely fast zero-dependency program
